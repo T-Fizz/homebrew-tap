@@ -30,7 +30,7 @@ class Takumi < Formula
 
   def install
     bin.install "takumi"
-    bin.install "t"
+    bin.install_symlink bin/"takumi" => "t"
   end
 
   test do
