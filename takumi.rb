@@ -11,7 +11,7 @@ class Takumi < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/T-Fizz/takumi/releases/download/v1.0.2/takumi_1.0.2_darwin_amd64.tar.gz"
-      sha256 "190cfcffe59fa57417c3252a748f51fa9c2be401b4fc2b7d1586f5e89872a13e"
+      sha256 "7dcf7f2a5389caaadcf36d5b22349fdb28c20841ec0429dd6ce81651649fbcec"
 
       define_method(:install) do
         bin.install "takumi"
@@ -20,7 +20,7 @@ class Takumi < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/T-Fizz/takumi/releases/download/v1.0.2/takumi_1.0.2_darwin_arm64.tar.gz"
-      sha256 "8894a5a4709cc6f2fedbd250d57f583818fe24cae3f8b8fe5f017a7d5768b511"
+      sha256 "23325f610e7af6ccecfcd06468f20b0f919544e422f1d761d80f2a0e74b8b834"
 
       define_method(:install) do
         bin.install "takumi"
@@ -32,7 +32,7 @@ class Takumi < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/T-Fizz/takumi/releases/download/v1.0.2/takumi_1.0.2_linux_amd64.tar.gz"
-      sha256 "98fbfc5d1e60b41f882eee5b7328872691f1e6937c9d63dfa22c22e3710090dd"
+      sha256 "f0ee6d5b5fd8ef2ebe0961cf8ff53fe20ab57d94201f1931b1560bd202945c25"
       define_method(:install) do
         bin.install "takumi"
         bin.install_symlink bin/"takumi" => "t"
@@ -40,7 +40,7 @@ class Takumi < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/T-Fizz/takumi/releases/download/v1.0.2/takumi_1.0.2_linux_arm64.tar.gz"
-      sha256 "e9d37c4d6a4c41c259c9d10e5b1371d4cb52856beeaad87dfc9dc78a9ae8826a"
+      sha256 "4e628cf5784b170625075898765d5ea5626c3cd0bd54f9759f5611a2ab6e46a2"
       define_method(:install) do
         bin.install "takumi"
         bin.install_symlink bin/"takumi" => "t"
