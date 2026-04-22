@@ -5,13 +5,13 @@
 class Takumi < Formula
   desc "AI-aware, language-agnostic workspace builder"
   homepage "https://github.com/T-Fizz/takumi"
-  version "1.0.1"
+  version "1.0.2"
   license "AGPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/T-Fizz/takumi/releases/download/v1.0.1/takumi_1.0.1_darwin_amd64.tar.gz"
-      sha256 "6eb7bc5d97dc1cf69ba0c5d482edce0bdd472b3b29f32c63041633e5a20452d6"
+      url "https://github.com/T-Fizz/takumi/releases/download/v1.0.2/takumi_1.0.2_darwin_amd64.tar.gz"
+      sha256 "190cfcffe59fa57417c3252a748f51fa9c2be401b4fc2b7d1586f5e89872a13e"
 
       define_method(:install) do
         bin.install "takumi"
@@ -19,8 +19,8 @@ class Takumi < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/T-Fizz/takumi/releases/download/v1.0.1/takumi_1.0.1_darwin_arm64.tar.gz"
-      sha256 "81bf1b1a7846c26a44c166c98694475407813a73c0394c41255113fd1c087b64"
+      url "https://github.com/T-Fizz/takumi/releases/download/v1.0.2/takumi_1.0.2_darwin_arm64.tar.gz"
+      sha256 "8894a5a4709cc6f2fedbd250d57f583818fe24cae3f8b8fe5f017a7d5768b511"
 
       define_method(:install) do
         bin.install "takumi"
@@ -31,16 +31,16 @@ class Takumi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/T-Fizz/takumi/releases/download/v1.0.1/takumi_1.0.1_linux_amd64.tar.gz"
-      sha256 "3e3e364b11ba759b29aaa64bc742247de637098c3ff972ac3103b83a015c1e1c"
+      url "https://github.com/T-Fizz/takumi/releases/download/v1.0.2/takumi_1.0.2_linux_amd64.tar.gz"
+      sha256 "98fbfc5d1e60b41f882eee5b7328872691f1e6937c9d63dfa22c22e3710090dd"
       define_method(:install) do
         bin.install "takumi"
         bin.install_symlink bin/"takumi" => "t"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/T-Fizz/takumi/releases/download/v1.0.1/takumi_1.0.1_linux_arm64.tar.gz"
-      sha256 "719440b75c2480479fbba307e663e637ef41ef82049f159664dcf2c02395368d"
+      url "https://github.com/T-Fizz/takumi/releases/download/v1.0.2/takumi_1.0.2_linux_arm64.tar.gz"
+      sha256 "e9d37c4d6a4c41c259c9d10e5b1371d4cb52856beeaad87dfc9dc78a9ae8826a"
       define_method(:install) do
         bin.install "takumi"
         bin.install_symlink bin/"takumi" => "t"
